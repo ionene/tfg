@@ -2,259 +2,324 @@
     "units": [
         {
             "id": 1,
+            "title": "Saludos",
             "percent": 0,
             "image": "image-1.png",
             "color": "purple",
             "exercises": [
                 {
                     "order": 1,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Kaixo nire izena Aizpea da",
+                    "response": ["Hola","mi","nombre","es","Aizpea"],
+                    "load": ["apellido","Hola","es","fue","mi","Aizpea","nombre","tio"]
                 },
                 {
                     "order": 2,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Egun on Mikel",
+                    "response": ["Buenos","días","Mikel"],
+                    "load": ["hasta","días","ir","Mikel","Buenos"]
                 },
                 {
                     "order": 3,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Ongi etorri etxera",
+                    "response": ["Bienvenid@","a","casa"],
+                    "load": ["Bien","pueblo","a","casa","al","Bienvenid@"]
                 },
                 {
                     "order": 4,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Tengo prisa hasta luego",
+                    "response": ["Prisa","daukat","gero","arte"],
+                    "load": ["Zurekin","Prisa","beste","daukat","gero","arte","oinez"]
                 },
                 {
                     "order": 5,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Pozten naiz zu ikusteaz, agur",
+                    "response": ["Me","alegro","de","verte","adiós"],
+                    "load": ["quiero","Me","caminando","alegro","de","verte","Te","adiós"]
                 }
             ]
         },
         {
             "id": 2,
+            "title": "Calendario",
             "percent": 0,
             "image": "image-2.png",
             "color": "orange",
             "exercises": [
                 {
                     "order": 1,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Este fin de semana nos vamos al pueblo",
+                    "response": ["Asteburu","honetan","herrira","goaz"],
+                    "load": ["zoaz","Asteburu","honetan","astoa","herrira","goaz"]
                 },
                 {
                     "order": 2,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Odio los lunes",
+                    "response": ["Astelehenak","gorroto","ditut"],
+                    "load": ["ostirala","Astelehenak","nire","gorroto","Zu","ditut"]
                 },
                 {
                     "order": 3,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Ostegunetan pintxopote dago Iruñean",
+                    "response": ["Los","jueves","hay","pinchopote","en","Pamplona"],
+                    "load": ["tiene","Los","jueves","hay","pescar","pinchopote","en","Por","Pamplona"]
                 },
                 {
                     "order": 4,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Astelehenetik Ostiralera lan egiten dut",
+                    "response": ["Trabajo","de","lunes","a","viernes"],
+                    "load": ["Trabajo","Colegio","lunes","a","de","viernes","mañana"]
                 },
                 {
                     "order": 5,
+                    "title": "Selecciona por parejas del mismo significado",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": ["Osteguna","Astelehena","Ostirala","Asteazkena","Igandea","Asteartea","Larunbata"],
+                    "response": ["Jueves","Lunes","Viernes","Miércoles","Domingo","Martes","Sábado"]
                 }
             ]
         },
         {
             "id": 3,
+            "title": "Emociones",
             "percent": 0,
             "image": "image-2-1.png",
-            "color": "purple",
+            "color": "green",
             "exercises": [
                 {
                     "order": 1,
-                    "image": null,
+                    "title": "Selecciona la palabra",
+                    "image": "enfadado.png",
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Enfadado",
+                    "response": ["Haserre"],
+                    "load": ["Pozik","Triste","Negarrez","Maiteminduta","Haserre"]
                 },
                 {
                     "order": 2,
-                    "image": null,
+                    "title": "Selecciona la palabra",
+                    "image": "feliz.png",
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Feliz",
+                    "response": ["Pozik"],
+                    "load": ["Pozik","Triste","Negarrez","Maiteminduta","Haserre"]
                 },
                 {
                     "order": 3,
-                    "image": null,
+                    "title": "Selecciona la palabra",
+                    "image": "triste.png",
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Triste",
+                    "response": ["Triste"],
+                    "load": ["Pozik","Triste","Negarrez","Maiteminduta","Haserre"]
                 },
                 {
                     "order": 4,
-                    "image": null,
+                    "title": "Selecciona la palabra",
+                    "image": "enamorado.png",
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Enamorado",
+                    "response": ["Maiteminduta"],
+                    "load": ["Pozik","Triste","Negarrez","Maiteminduta","Haserre"]
                 },
                 {
                     "order": 5,
-                    "image": null,
+                    "title": "Selecciona la palabra",
+                    "image": "llorando.png",
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Llorando",
+                    "response": ["Negarrez"],
+                    "load": ["Pozik","Triste","Negarrez","Maiteminduta","Haserre"]
                 }
             ]
         },
         {
             "id": 4,
+            "title": "Familia",
             "percent": 0,
             "image": "image-3.png",
-            "color": "purple",
+            "color": "blue",
             "exercises": [
                 {
                     "order": 1,
+                    "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": null
+                    "text": "Nire gurasoek txirrindula oparitu didate",
+                    "response": ["Mis","padres","me","han","regalado","una","bici"],
+                    "load": ["regalado","padres","abuelos","bici","han","dado","una","paga","Mis","me"]
                 },
                 {
                     "order": 2,
-                    "image": null,
-                    "audio": null,
+                    "title": "Familia",
+                    "image": "neba_arrebak.png",
+                    "audio": "neba_arrebak.mp3",
                     "text": null,
-                    "response": null
+                    "response": ["Xabi","eta","Nahia","neba-arrebak","dira"],
+                    "load": ["Xabi","ahizpak","eta","Nahia","neba-arrebak","dira","anaiak"]
                 },
                 {
                     "order": 3,
-                    "image": null,
-                    "audio": null,
+                    "title": "Familia",
+                    "image": "anaiak.png",
+                    "audio": "anaiak.mp3",
                     "text": null,
-                    "response": null
+                    "response": ["Iker","eta","Unai","anaiak","dira"],
+                    "load": ["Unai","ahizpak","eta","Iker","neba-arrebak","dira","anaiak"]
                 },
                 {
                     "order": 4,
-                    "image": null,
-                    "audio": null,
-                    "text": null,
-                    "response": null
+                    "title": "Familia",
+                    "image": "ahizpak.png",
+                    "audio": "ahizpak.mp3",
+                    "response": ["Eider","eta","Maider","ahizpak","dira"],
+                    "load": ["Eider","ahizpak","eta","Maider","neba-arrebak","dira","anaiak"]
                 },
                 {
                     "order": 5,
+                    "title": "Familia",
                     "image": null,
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["Aita","Ama","Lehengusina","Lehengusua","Izeba","Osaba","Amona","Aitona"],
+                    "load": ["Padre","Madre","Prima","Primo","Tía","Tío","Abuela","Abuelo"]
+                    
                 }
             ]
         },
         {
             "id": 5,
+            "title": "Colores",
             "percent": 0,
             "image": "image-4.png",
-            "color": "purple",
+            "color": "green",
             "exercises": [
                 {
                     "order": 1,
-                    "image": null,
+                    "title": "Selecciona el color que tiene la palabra",
+                    "image": "horia.png",
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["horia"],
+                    "load": ["morea","laranja","horia","beltza","urdina"]
                 },
                 {
                     "order": 2,
-                    "image": null,
+                    "title": "Selecciona el color que tiene la palabra",
+                    "image": "laranja.png",
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["laranja"],
+                    "load": ["morea","laranja","horia","beltza","urdina"]
                 },
                 {
                     "order": 3,
-                    "image": null,
+                    "title": "Selecciona el color que tiene la palabra",
+                    "image": "urdina.png",
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["urdina"],
+                    "load": ["morea","laranja","horia","beltza","urdina"]
                 },
                 {
                     "order": 4,
-                    "image": null,
+                    "title": "Selecciona el color que tiene la palabra",
+                    "image": "morea.png",
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["morea"],
+                    "load": ["morea","laranja","horia","beltza","urdina"]
                 },
                 {
                     "order": 5,
-                    "image": null,
+                    "title": "Selecciona el color que tiene la palabra",
+                    "image": "beltza.png",
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["beltza"],
+                    "load": ["morea","laranja","horia","beltza","urdina"]
                 }
             ]
         },
         {
             "id": 6,
+            "title": "Trabalenguas",
             "percent": 0,
             "image": "image-4-1.png",
-            "color": "purple",
+            "color": "pink",
             "exercises": [
                 {
                     "order": 1,
+                    "title": "Escucha y selecciona las palabras",
                     "image": null,
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["Akerrak","adarrak","okerrak","ditu"],
+                    "load": ["okerrak","ahizpak","ditu","Akerrak","orkatz","adarrak"]
                 },
                 {
                     "order": 2,
+                    "title": "Escucha y selecciona las palabras",
                     "image": null,
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["Ongi","pasa","pasatu","gabe"],
+                    "load": ["pasatu","Ongi","Ogi","pasa","gabe","alea"]
                 },
                 {
                     "order": 3,
+                    "title": "Escucha y selecciona las palabras",
                     "image": null,
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["Non","gogoa","han","zangoa"],
+                    "load": ["gogoa","Non","Jon","zangoa","zozoa","han"]
                 },
                 {
                     "order": 4,
+                    "title": "Escucha y selecciona las palabras",
                     "image": null,
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["A","ze","parea","karakola","eta","barea"],
+                    "load": ["eta","ze","akerra","parea","A","coca-cola","karakola","barea"]
                 },
                 {
                     "order": 5,
+                    "title": "Escucha y selecciona las palabras",
                     "image": null,
                     "audio": null,
                     "text": null,
-                    "response": null
+                    "response": ["Zozoak","beleari","ipurbeltz"],
+                    "load": ["ipurbeltz","gogoa","arrebari","Zozoak","akerbeltz","beleari"]
                 }
             ]
         }
