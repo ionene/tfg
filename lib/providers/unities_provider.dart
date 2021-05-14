@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 import 'dart:convert';
 
-import 'package:tfg_ione/src/models/unity_model.dart';
+import 'package:tfg_ione/src/models/unit_model.dart';
 
 class UnitiesProvider {
   Future<List<UnitModel>> getUnits() async {

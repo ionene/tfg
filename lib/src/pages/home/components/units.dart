@@ -1,10 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import 'package:tfg_ione/providers/unities_provider.dart';
-import 'package:tfg_ione/src/models/unity_model.dart';
+import 'package:tfg_ione/src/models/unit_model.dart';
 
 class Unities extends StatefulWidget {
   Unities({Key key}) : super(key: key);
@@ -40,9 +38,9 @@ class _UnitiesState extends State<Unities> {
             else {
               var units = snapshot.data;
               var patata = [
-                [units[0]], 
+                [units[0]],
                 [units[1], units[2]],
-                [units[3]], 
+                [units[3]],
                 [units[4], units[5]],
               ];
 
@@ -52,24 +50,6 @@ class _UnitiesState extends State<Unities> {
         }
       },
     );
-  }
-
-  Color _generateColor() {
-    List<Color> colors = [
-      Colors.red,
-      Colors.green,
-      Colors.blue,
-      Colors.pink,
-      Colors.yellow,
-      Colors.orange,
-      Colors.grey,
-      Colors.purple
-    ];
-
-    Random random = new Random();
-    int randomNumber = random.nextInt(7);
-
-    return colors[randomNumber];
   }
 
   String generateImage(String number) {
@@ -102,35 +82,29 @@ class _UnitiesState extends State<Unities> {
       );
 
     return Container(
-      height: 150, 
+      height: 150,
       child: unity,
     );
   }
 
   Widget _unity(BuildContext context, UnitModel unity) {
-    Color color = Colors.black;
-
-    switch (unity.color) {
-      case 'green':
-        color = Colors.green[200];
-    }
-
     return Column(
       children: [
         CircularPercentIndicator(
           radius: 80.0,
           lineWidth: 5.0,
-          percent: 0.5,
+          percent: 0.65,
           center: Container(
             margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
             decoration: BoxDecoration(
-               color: color, borderRadius: BorderRadius.circular(40)),
+                color: _getColor(unity),
+                borderRadius: BorderRadius.circular(40)),
             child: Image(
               height: 80,
               image: AssetImage('assets/images/units/' + unity.image),
             ),
           ),
-          progressColor: Colors.green,
+          progressColor: Colors.green[400],
         ),
         Padding(
           padding: EdgeInsets.only(top: 10.0),
@@ -138,5 +112,30 @@ class _UnitiesState extends State<Unities> {
         ),
       ],
     );
+  }
+
+  Color _getColor(UnitModel unity) {
+    switch (unity.color) {
+      case 'purple':
+        return Colors.purple[300];
+
+      case 'indigo':
+        return Colors.indigo[300];
+
+      case 'amber':
+        return Colors.amber[300];
+
+      case 'cyan':
+        return Colors.cyan[300];
+
+      case 'teal':
+        return Colors.teal[300];
+
+      case 'lime':
+        return Colors.lime[400];
+
+      default:
+        return Colors.orange[300];
+    }
   }
 }

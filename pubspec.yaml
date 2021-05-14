@@ -41,6 +41,10 @@ dev_dependencies:
 flutter:
   assets: 
     - assets/images/units/
+    - assets/images/avatar/
+    - assets/images/colors/
+    - assets/images/congrats/
+    - assets/images/emotions/
     - assets/data/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

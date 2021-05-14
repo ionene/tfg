@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class MyAppBar extends AppBar {
@@ -13,11 +15,16 @@ class MyAppBar extends AppBar {
           ),
           elevation: 0.0,
           actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.person),
-              iconSize: 26.0,
-              onPressed: () {},
-            ),
+            Padding(padding: EdgeInsets.only(right: 10),
+              child: CircleAvatar(
+                backgroundColor: Colors.white24,
+                child: Image(   
+                  height: 40,
+                  fit: BoxFit.cover,         
+                  image: AssetImage('assets/images/avatar/' + 'avatar.png'),
+                ),
+              ),
+            ),  
           ],
         );
 }

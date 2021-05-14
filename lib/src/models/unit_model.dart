@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
+
 import 'package:tfg_ione/src/models/exercise_model.dart';
 
 UnitModel unitModelFromJson(String str) => UnitModel.fromJson(json.decode(str));

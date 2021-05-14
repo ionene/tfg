@@ -4,8 +4,8 @@
             "id": 1,
             "title": "Saludos",
             "percent": 0,
-            "image": "image-0.png",
-            "color": "purple",
+            "image": "saludos.png",
+            "color": "indigo",
             "exercises": [
                 {
                     "order": 1,
@@ -56,54 +56,55 @@
         },
         {
             "id": 2,
-            "title": "Calendario",
+            "title": "Familia",
             "percent": 0,
-            "image": "image-1.png",
-            "color": "orange",
+            "image": "familia.png",
+            "color": "cyan",
             "exercises": [
                 {
                     "order": 1,
                     "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": "Este fin de semana nos vamos al pueblo",
-                    "response": ["Asteburu","honetan","herrira","goaz"],
-                    "load": ["zoaz","Asteburu","honetan","astoa","herrira","goaz"]
+                    "text": "Nire gurasoek txirrindula oparitu didate",
+                    "response": ["Mis","padres","me","han","regalado","una","bici"],
+                    "load": ["regalado","padres","abuelos","bici","han","dado","una","paga","Mis","me"]
                 },
                 {
                     "order": 2,
-                    "title": "Traduce la frase",
-                    "image": null,
-                    "audio": null,
-                    "text": "Odio los lunes",
-                    "response": ["Astelehenak","gorroto","ditut"],
-                    "load": ["ostirala","Astelehenak","nire","gorroto","Zu","ditut"]
+                    "title": "Familia",
+                    "image": "neba_arrebak.png",
+                    "audio": "neba_arrebak.mp3",
+                    "text": null,
+                    "response": ["Xabi","eta","Nahia","neba-arrebak","dira"],
+                    "load": ["Xabi","ahizpak","eta","Nahia","neba-arrebak","dira","anaiak"]
                 },
                 {
                     "order": 3,
-                    "title": "Traduce la frase",
-                    "image": null,
-                    "audio": null,
-                    "text": "Ostegunetan pintxopote dago Iruñean",
-                    "response": ["Los","jueves","hay","pinchopote","en","Pamplona"],
-                    "load": ["tiene","Los","jueves","hay","pescar","pinchopote","en","Por","Pamplona"]
+                    "title": "Familia",
+                    "image": "anaiak.png",
+                    "audio": "anaiak.mp3",
+                    "text": null,
+                    "response": ["Iker","eta","Unai","anaiak","dira"],
+                    "load": ["Unai","ahizpak","eta","Iker","neba-arrebak","dira","anaiak"]
                 },
                 {
                     "order": 4,
-                    "title": "Traduce la frase",
-                    "image": null,
-                    "audio": null,
-                    "text": "Astelehenetik Ostiralera lan egiten dut",
-                    "response": ["Trabajo","de","lunes","a","viernes"],
-                    "load": ["Trabajo","Colegio","lunes","a","de","viernes","mañana"]
+                    "title": "Familia",
+                    "image": "ahizpak.png",
+                    "audio": "ahizpak.mp3",
+                    "response": ["Eider","eta","Maider","ahizpak","dira"],
+                    "load": ["Eider","ahizpak","eta","Maider","neba-arrebak","dira","anaiak"]
                 },
                 {
                     "order": 5,
-                    "title": "Selecciona por parejas del mismo significado",
+                    "title": "Familia",
                     "image": null,
                     "audio": null,
-                    "text": ["Osteguna","Astelehena","Ostirala","Asteazkena","Igandea","Asteartea","Larunbata"],
-                    "response": ["Jueves","Lunes","Viernes","Miércoles","Domingo","Martes","Sábado"]
+                    "text": null,
+                    "response": ["Aita","Ama","Lehengusina","Lehengusua","Izeba","Osaba","Amona","Aitona"],
+                    "load": ["Padre","Madre","Prima","Primo","Tía","Tío","Abuela","Abuelo"]
+                    
                 }
             ]
         },
@@ -111,8 +112,8 @@
             "id": 3,
             "title": "Emociones",
             "percent": 0,
-            "image": "image-1-2.png",
-            "color": "green",
+            "image": "emociones.png",
+            "color": "amber",
             "exercises": [
                 {
                     "order": 1,
@@ -163,55 +164,54 @@
         },
         {
             "id": 4,
-            "title": "Familia",
+            "title": "Calendario",
             "percent": 0,
-            "image": "image-2.png",
-            "color": "blue",
+            "image": "calendario.png",
+            "color": "purple",
             "exercises": [
                 {
                     "order": 1,
                     "title": "Traduce la frase",
                     "image": null,
                     "audio": null,
-                    "text": "Nire gurasoek txirrindula oparitu didate",
-                    "response": ["Mis","padres","me","han","regalado","una","bici"],
-                    "load": ["regalado","padres","abuelos","bici","han","dado","una","paga","Mis","me"]
+                    "text": "Este fin de semana nos vamos al pueblo",
+                    "response": ["Asteburu","honetan","herrira","goaz"],
+                    "load": ["zoaz","Asteburu","honetan","astoa","herrira","goaz"]
                 },
                 {
                     "order": 2,
-                    "title": "Familia",
-                    "image": "neba_arrebak.png",
-                    "audio": "neba_arrebak.mp3",
-                    "text": null,
-                    "response": ["Xabi","eta","Nahia","neba-arrebak","dira"],
-                    "load": ["Xabi","ahizpak","eta","Nahia","neba-arrebak","dira","anaiak"]
+                    "title": "Traduce la frase",
+                    "image": null,
+                    "audio": null,
+                    "text": "Odio los lunes",
+                    "response": ["Astelehenak","gorroto","ditut"],
+                    "load": ["ostirala","Astelehenak","nire","gorroto","Zu","ditut"]
                 },
                 {
                     "order": 3,
-                    "title": "Familia",
-                    "image": "anaiak.png",
-                    "audio": "anaiak.mp3",
-                    "text": null,
-                    "response": ["Iker","eta","Unai","anaiak","dira"],
-                    "load": ["Unai","ahizpak","eta","Iker","neba-arrebak","dira","anaiak"]
+                    "title": "Traduce la frase",
+                    "image": null,
+                    "audio": null,
+                    "text": "Ostegunetan pintxopote dago Iruñean",
+                    "response": ["Los","jueves","hay","pinchopote","en","Pamplona"],
+                    "load": ["tiene","Los","jueves","hay","pescar","pinchopote","en","Por","Pamplona"]
                 },
                 {
                     "order": 4,
-                    "title": "Familia",
-                    "image": "ahizpak.png",
-                    "audio": "ahizpak.mp3",
-                    "response": ["Eider","eta","Maider","ahizpak","dira"],
-                    "load": ["Eider","ahizpak","eta","Maider","neba-arrebak","dira","anaiak"]
+                    "title": "Traduce la frase",
+                    "image": null,
+                    "audio": null,
+                    "text": "Astelehenetik Ostiralera lan egiten dut",
+                    "response": ["Trabajo","de","lunes","a","viernes"],
+                    "load": ["Trabajo","Colegio","lunes","a","de","viernes","mañana"]
                 },
                 {
                     "order": 5,
-                    "title": "Familia",
+                    "title": "Selecciona por parejas del mismo significado",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": ["Aita","Ama","Lehengusina","Lehengusua","Izeba","Osaba","Amona","Aitona"],
-                    "load": ["Padre","Madre","Prima","Primo","Tía","Tío","Abuela","Abuelo"]
-                    
+                    "text": ["Osteguna","Astelehena","Ostirala","Asteazkena","Igandea","Asteartea","Larunbata"],
+                    "response": ["Jueves","Lunes","Viernes","Miércoles","Domingo","Martes","Sábado"]
                 }
             ]
         },
@@ -219,8 +219,8 @@
             "id": 5,
             "title": "Colores",
             "percent": 0,
-            "image": "image-3.png",
-            "color": "green",
+            "image": "colores.png",
+            "color": "teal",
             "exercises": [
                 {
                     "order": 1,
@@ -273,8 +273,8 @@
             "id": 6,
             "title": "Trabalenguas",
             "percent": 0,
-            "image": "image-3-2.png",
-            "color": "pink",
+            "image": "trabalenguas.png",
+            "color": "lime",
             "exercises": [
                 {
                     "order": 1,
