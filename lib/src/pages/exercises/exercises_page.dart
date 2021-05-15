@@ -10,6 +10,8 @@ import 'package:tfg_ione/src/pages/exercises/components/word_components.dart';
 import 'package:tfg_ione/src/models/exercise_model.dart';
 import 'package:tfg_ione/src/models/unit_model.dart';
 
+import 'components/title_components.dart';
+
 class ExercisesPage extends StatefulWidget {
   ExercisesPage({Key key}) : super(key: key);
 
@@ -38,9 +40,25 @@ class _ExercisesPageState extends State<ExercisesPage> {
 
     List<Widget> components = [];
 
+    if (exercise.title != null) {
+      TitleComponent comp = TitleComponent(
+        title: exercise.title,
+      );
+
+      components.add(comp);
+    }
+
     if (exercise.image != null) {
       ImageComponent comp = ImageComponent(
         image: exercise.image,
+      );
+
+      components.add(comp);
+    }
+
+    if (exercise.audio != null) {
+      AudioComponent comp = AudioComponent(
+        audio: exercise.audio,
       );
 
       components.add(comp);
@@ -53,13 +71,37 @@ class _ExercisesPageState extends State<ExercisesPage> {
 
       components.add(comp);
     }
-    // AudioComponent(),
-    // WordComponent()
+
+    final size = MediaQuery.of(context).size;
 
     return Container(
       child: Column(
-        children: components,
+        children: [
+          Container(
+            padding: EdgeInsets.only(top: 50.0),
+            height: size.height * 0.5,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: components,
+            ),
+          ),
+          Container(
+              height: size.height * 0.4,
+              child: WordsComponent(
+                load: exercise.load,
+                response: exercise.response,
+                incrementExercise: incrementExercise,
+              )),
+        ],
       ),
     );
+  }
+
+  incrementExercise() {
+    (actualExercise < unit.exercises.length - 1) 
+      ? actualExercise++ 
+      : Navigator.pop(context);
+
+    setState(() {});
   }
 }

@@ -12,7 +12,7 @@ class Unities extends StatefulWidget {
 }
 
 class _UnitiesState extends State<Unities> {
-  List _unityList = [];
+  List _unitList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _UnitiesState extends State<Unities> {
               return Text('Error: ${snapshot.error}');
             else {
               var units = snapshot.data;
-              _unityList = [
+              _unitList = [
                 [units[0]],
                 [units[1], units[2]],
                 [units[3]],
@@ -60,38 +60,38 @@ class _UnitiesState extends State<Unities> {
         margin: EdgeInsets.only(top: 20.0),
         child: ListView.builder(
           itemBuilder: (context, index) =>
-              _unitiesColumn(context, _unityList[index]),
-          itemCount: _unityList.length,
+              _unitiesColumn(context, _unitList[index]),
+          itemCount: _unitList.length,
         ),
       ),
     );
   }
 
   Widget _unitiesColumn(BuildContext context, List unities) {
-    Widget unity = Row(
+    Widget unit = Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [_unity(context, unities[0])],
+      children: [_unit(context, unities[0])],
     );
 
     if (unities.length == 2)
-      unity = Row(
+      unit = Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [_unity(context, unities[0]), _unity(context, unities[1])],
+        children: [_unit(context, unities[0]), _unit(context, unities[1])],
       );
 
     return Container(
       height: 150,
-      child: unity,
+      child: unit,
     );
   }
 
-  Widget _unity(BuildContext context, UnitModel unity) {
+  Widget _unit(BuildContext context, UnitModel unit) {
 
     return Column(
       children: [
         GestureDetector(
           onTap: () =>
-              Navigator.pushNamed(context, 'exercises', arguments: unity),
+              Navigator.pushNamed(context, 'exercises', arguments: unit),
           child: CircularPercentIndicator(
             radius: 80.0,
             lineWidth: 5.0,
@@ -99,11 +99,11 @@ class _UnitiesState extends State<Unities> {
             center: Container(
               margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
               decoration: BoxDecoration(
-                  color: _getColor(unity),
+                  color: _getColor(unit),
                   borderRadius: BorderRadius.circular(40)),
               child: Image(
                 height: 80,
-                image: AssetImage('assets/images/units/' + unity.image),
+                image: AssetImage('assets/images/units/' + unit.image),
               ),
             ),
             progressColor: Colors.green[400],
@@ -111,14 +111,14 @@ class _UnitiesState extends State<Unities> {
         ),
         Padding(
           padding: EdgeInsets.only(top: 10.0),
-          child: Text(unity.title),
+          child: Text(unit.title),
         ),
       ],
     );
   }
 
-  Color _getColor(UnitModel unity) {
-    switch (unity.color) {
+  Color _getColor(UnitModel unit) {
+    switch (unit.color) {
       case 'lime':
         return Colors.lime[300];
 
