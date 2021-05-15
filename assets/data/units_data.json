@@ -210,8 +210,9 @@
                     "title": "Selecciona por parejas del mismo significado",
                     "image": null,
                     "audio": null,
-                    "text": ["Osteguna","Astelehena","Ostirala","Asteazkena","Igandea","Asteartea","Larunbata"],
-                    "response": ["Jueves","Lunes","Viernes","Miércoles","Domingo","Martes","Sábado"]
+                    "text": null,
+                    "response": ["Osteguna","Astelehena","Ostirala","Asteazkena","Igandea","Asteartea","Larunbata"],
+                    "load": ["Jueves","Lunes","Viernes","Miércoles","Domingo","Martes","Sábado"]
                 }
             ]
         },

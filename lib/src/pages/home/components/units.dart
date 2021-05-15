@@ -37,14 +37,12 @@ class _UnitiesState extends State<Unities> {
               return Text('Error: ${snapshot.error}');
             else {
               var units = snapshot.data;
-              var patata = [
+              _unityList = [
                 [units[0]],
                 [units[1], units[2]],
                 [units[3]],
                 [units[4], units[5]],
               ];
-
-              _unityList = patata;
               return unitiesListView();
             }
         }
@@ -88,23 +86,28 @@ class _UnitiesState extends State<Unities> {
   }
 
   Widget _unity(BuildContext context, UnitModel unity) {
+
     return Column(
       children: [
-        CircularPercentIndicator(
-          radius: 80.0,
-          lineWidth: 5.0,
-          percent: 0.65,
-          center: Container(
-            margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
-            decoration: BoxDecoration(
-                color: _getColor(unity),
-                borderRadius: BorderRadius.circular(40)),
-            child: Image(
-              height: 80,
-              image: AssetImage('assets/images/units/' + unity.image),
+        GestureDetector(
+          onTap: () =>
+              Navigator.pushNamed(context, 'exercises', arguments: unity),
+          child: CircularPercentIndicator(
+            radius: 80.0,
+            lineWidth: 5.0,
+            percent: 0.65,
+            center: Container(
+              margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
+              decoration: BoxDecoration(
+                  color: _getColor(unity),
+                  borderRadius: BorderRadius.circular(40)),
+              child: Image(
+                height: 80,
+                image: AssetImage('assets/images/units/' + unity.image),
+              ),
             ),
+            progressColor: Colors.green[400],
           ),
-          progressColor: Colors.green[400],
         ),
         Padding(
           padding: EdgeInsets.only(top: 10.0),
@@ -116,11 +119,11 @@ class _UnitiesState extends State<Unities> {
 
   Color _getColor(UnitModel unity) {
     switch (unity.color) {
+      case 'lime':
+        return Colors.lime[300];
+
       case 'purple':
         return Colors.purple[300];
-
-      case 'indigo':
-        return Colors.indigo[300];
 
       case 'amber':
         return Colors.amber[300];
@@ -131,11 +134,11 @@ class _UnitiesState extends State<Unities> {
       case 'teal':
         return Colors.teal[300];
 
-      case 'lime':
-        return Colors.lime[400];
+      case 'orange':
+        return Colors.orange[300];
 
       default:
-        return Colors.orange[300];
+        return Colors.indigo[300];
     }
   }
 }

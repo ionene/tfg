@@ -20,7 +20,7 @@ class UnitModel {
   int percent;
   String image;
   String color;
-  List<ExercisesModel> exercises;
+  List<ExerciseModel> exercises;
 
   factory UnitModel.fromJson(Map<String, dynamic> json) => UnitModel(
         id: json["id"],
@@ -28,7 +28,7 @@ class UnitModel {
         percent: json["percent"],
         image: json["image"],
         color: json["color"],
-        //exercises: List<ExercisesModel>.from(json["exercises"].map((e) => ExercisesModel.fromJson(e))),
+        exercises: List<ExerciseModel>.from(json["exercises"].map((e) => ExerciseModel.fromJson(e)).toList()),
       );
 
 }
