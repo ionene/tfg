@@ -8,6 +8,7 @@ class TextComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 50),
       child: Text(text),
     );
   }

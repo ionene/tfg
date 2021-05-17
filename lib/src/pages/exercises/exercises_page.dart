@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tfg_ione/preferences/main_preferences.dart';
 
 import 'package:tfg_ione/src/widgets/myAppBar.dart';
 
@@ -22,11 +23,17 @@ class ExercisesPage extends StatefulWidget {
 class _ExercisesPageState extends State<ExercisesPage> {
   UnitModel unit;
   int actualExercise = 0;
+  int index;
+
+  final _prefs = MainPreferences();
 
   @override
   Widget build(BuildContext context) {
-    unit = ModalRoute.of(context).settings.arguments;
+    final arguments = ModalRoute.of(context).settings.arguments as Map;
 
+    unit = arguments['unit'];
+    index = arguments['index'];
+    
     return Scaffold(
       appBar: MyAppBar(
         title: unit.title,
@@ -86,21 +93,26 @@ class _ExercisesPageState extends State<ExercisesPage> {
             ),
           ),
           Container(
-              height: size.height * 0.4,
-              child: WordsComponent(
-                load: exercise.load,
-                response: exercise.response,
-                incrementExercise: incrementExercise,
-              )),
+            height: size.height * 0.4,
+            child: WordsComponent(
+              load: exercise.load,
+              response: exercise.response,
+              incrementExercise: incrementExercise,
+            ),
+          ),
         ],
       ),
     );
   }
 
   incrementExercise() {
-    (actualExercise < unit.exercises.length - 1) 
-      ? actualExercise++ 
-      : Navigator.pop(context);
+    List<String> donePercent = _prefs.donePercent;
+    donePercent[index] = (actualExercise + 1).toString();
+    _prefs.donePercent = donePercent;
+
+    (actualExercise < unit.exercises.length - 1)
+        ? actualExercise++
+        : Navigator.pushReplacementNamed(context, 'home');
 
     setState(() {});
   }

@@ -73,8 +73,8 @@
                 {
                     "order": 2,
                     "title": "Familia",
-                    "image": "neba_arrebak.png",
-                    "audio": "neba_arrebak.mp3",
+                    "image": "family/neba_arrebak.png",
+                    "audio": null,
                     "text": null,
                     "response": ["Xabi","eta","Nahia","neba-arrebak","dira"],
                     "load": ["Xabi","ahizpak","eta","Nahia","neba-arrebak","dira","anaiak"]
@@ -82,8 +82,8 @@
                 {
                     "order": 3,
                     "title": "Familia",
-                    "image": "anaiak.png",
-                    "audio": "anaiak.mp3",
+                    "image": "family/anaiak.png",
+                    "audio": null,
                     "text": null,
                     "response": ["Iker","eta","Unai","anaiak","dira"],
                     "load": ["Unai","ahizpak","eta","Iker","neba-arrebak","dira","anaiak"]
@@ -91,8 +91,8 @@
                 {
                     "order": 4,
                     "title": "Familia",
-                    "image": "ahizpak.png",
-                    "audio": "ahizpak.mp3",
+                    "image": "family/ahizpak.png",
+                    "audio": null,
                     "response": ["Eider","eta","Maider","ahizpak","dira"],
                     "load": ["Eider","ahizpak","eta","Maider","neba-arrebak","dira","anaiak"]
                 },
@@ -101,9 +101,9 @@
                     "title": "Familia",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": ["Aita","Ama","Lehengusina","Lehengusua","Izeba","Osaba","Amona","Aitona"],
-                    "load": ["Padre","Madre","Prima","Primo","Tía","Tío","Abuela","Abuelo"]
+                    "text": "Aita, Ama, Lehengusina, Lehengusua, Izeba, Osaba, Amona, Aitona",
+                    "response": ["Padre","Madre","Prima","Primo","Tía","Tío","Abuela","Abuelo"],
+                    "load": ["Tío","Madre","Primo","Padre","Tía","Abuela","Prima","Abuelo"]
                     
                 }
             ]
@@ -118,7 +118,7 @@
                 {
                     "order": 1,
                     "title": "Selecciona la palabra",
-                    "image": "enfadado.png",
+                    "image": "emotions/haserre.png",
                     "audio": null,
                     "text": "Enfadado",
                     "response": ["Haserre"],
@@ -127,7 +127,7 @@
                 {
                     "order": 2,
                     "title": "Selecciona la palabra",
-                    "image": "feliz.png",
+                    "image": "emotions/pozik.png",
                     "audio": null,
                     "text": "Feliz",
                     "response": ["Pozik"],
@@ -136,7 +136,7 @@
                 {
                     "order": 3,
                     "title": "Selecciona la palabra",
-                    "image": "triste.png",
+                    "image": "emotions/triste.png",
                     "audio": null,
                     "text": "Triste",
                     "response": ["Triste"],
@@ -145,7 +145,7 @@
                 {
                     "order": 4,
                     "title": "Selecciona la palabra",
-                    "image": "enamorado.png",
+                    "image": "emotions/maiteminduta.png",
                     "audio": null,
                     "text": "Enamorado",
                     "response": ["Maiteminduta"],
@@ -154,7 +154,7 @@
                 {
                     "order": 5,
                     "title": "Selecciona la palabra",
-                    "image": "llorando.png",
+                    "image": "emotions/negarrez.png",
                     "audio": null,
                     "text": "Llorando",
                     "response": ["Negarrez"],
@@ -210,9 +210,9 @@
                     "title": "Selecciona por parejas del mismo significado",
                     "image": null,
                     "audio": null,
-                    "text": null,
-                    "response": ["Osteguna","Astelehena","Ostirala","Asteazkena","Igandea","Asteartea","Larunbata"],
-                    "load": ["Jueves","Lunes","Viernes","Miércoles","Domingo","Martes","Sábado"]
+                    "text": "Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo",
+                    "response": ["Astelehena","Asteartea","Asteazkena","Osteguna","Ostirala","Larunbata","Igandea"],
+                    "load": ["Osteguna","Asteartea","Igandea","Asteazkena","Ostirala","Astelehena","Larunbata"]
                 }
             ]
         },
@@ -226,7 +226,7 @@
                 {
                     "order": 1,
                     "title": "Selecciona el color que tiene la palabra",
-                    "image": "horia.png",
+                    "image": "colors/horia.png",
                     "audio": null,
                     "text": null,
                     "response": ["horia"],
@@ -235,7 +235,7 @@
                 {
                     "order": 2,
                     "title": "Selecciona el color que tiene la palabra",
-                    "image": "laranja.png",
+                    "image": "colors/laranja.png",
                     "audio": null,
                     "text": null,
                     "response": ["laranja"],
@@ -244,7 +244,7 @@
                 {
                     "order": 3,
                     "title": "Selecciona el color que tiene la palabra",
-                    "image": "urdina.png",
+                    "image": "colors/urdina.png",
                     "audio": null,
                     "text": null,
                     "response": ["urdina"],
@@ -253,7 +253,7 @@
                 {
                     "order": 4,
                     "title": "Selecciona el color que tiene la palabra",
-                    "image": "morea.png",
+                    "image": "colors/morea.png",
                     "audio": null,
                     "text": null,
                     "response": ["morea"],
@@ -262,7 +262,7 @@
                 {
                     "order": 5,
                     "title": "Selecciona el color que tiene la palabra",
-                    "image": "beltza.png",
+                    "image": "colors/beltza.png",
                     "audio": null,
                     "text": null,
                     "response": ["beltza"],
@@ -308,7 +308,7 @@
                     "order": 4,
                     "title": "Escucha y selecciona las palabras",
                     "image": null,
-                    "audio": "a_ze.mp3",
+                    "audio": "aze.mp3",
                     "text": null,
                     "response": ["A","ze","parea","karakola","eta","barea"],
                     "load": ["eta","ze","akerra","parea","A","coca-cola","karakola","barea"]

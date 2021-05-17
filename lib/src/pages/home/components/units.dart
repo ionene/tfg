@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:tfg_ione/preferences/main_preferences.dart';
 
 import 'package:tfg_ione/providers/units_provider.dart';
 import 'package:tfg_ione/src/models/unit_model.dart';
@@ -14,10 +15,12 @@ class Unities extends StatefulWidget {
 class _UnitiesState extends State<Unities> {
   List _unitList = [];
 
+  final _prefs = MainPreferences();
+
   @override
   Widget build(BuildContext context) {
+
     return Container(
-      // child: _unitiesListView(),
       child: _getUnits(),
     );
   }
@@ -36,13 +39,22 @@ class _UnitiesState extends State<Unities> {
             if (snapshot.hasError)
               return Text('Error: ${snapshot.error}');
             else {
-              var units = snapshot.data;
+              List units = snapshot.data;
               _unitList = [
                 [units[0]],
                 [units[1], units[2]],
                 [units[3]],
                 [units[4], units[5]],
               ];
+
+              if (_prefs.donePercent == null) {
+                List<String> donePercent = [];
+
+                units.forEach((u) => donePercent.add('0'));
+
+                _prefs.donePercent = donePercent;
+              }
+
               return unitiesListView();
             }
         }
@@ -86,16 +98,15 @@ class _UnitiesState extends State<Unities> {
   }
 
   Widget _unit(BuildContext context, UnitModel unit) {
-
     return Column(
       children: [
         GestureDetector(
-          onTap: () =>
-              Navigator.pushNamed(context, 'exercises', arguments: unit),
+          onTap: () => Navigator.pushNamed(context, 'exercises',
+              arguments: {'unit': unit, 'index': unit.id - 1}),
           child: CircularPercentIndicator(
             radius: 80.0,
             lineWidth: 5.0,
-            percent: 0.65,
+            percent: double.parse(_prefs.donePercent[unit.id - 1]) * 0.2,
             center: Container(
               margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
               decoration: BoxDecoration(

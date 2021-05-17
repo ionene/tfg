@@ -10,7 +10,6 @@ void main() async {
   await prefs.initPrefs();
 
   runApp(MyApp());
-
 }
 
 class MyApp extends StatelessWidget {

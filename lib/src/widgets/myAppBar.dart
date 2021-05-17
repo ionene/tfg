@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:tfg_ione/preferences/main_preferences.dart';
+
 import 'package:tfg_ione/src/widgets/myActions.dart';
 
 class MyAppBar extends AppBar {

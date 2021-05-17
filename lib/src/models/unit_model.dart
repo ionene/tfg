@@ -17,7 +17,7 @@ class UnitModel {
 
   int id;
   String title;
-  int percent;
+  double percent;
   String image;
   String color;
   List<ExerciseModel> exercises;

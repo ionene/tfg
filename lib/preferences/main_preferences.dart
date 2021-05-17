@@ -16,18 +16,19 @@ class MainPreferences {
   }
 
   get initialPage {
-    return _prefs.getString('lastPage') ?? 'login';
+    return _prefs.getString('initialPage') ?? 'login';
   }
 
   set initialPage(String initialPage) {
-    _prefs.setString('lastPage', initialPage);
+    _prefs.setString('initialPage', initialPage);
   }
 
-  get completedExercises {
-    return _prefs.getStringList('completedExercises') ?? '';
+
+  get donePercent{
+    return _prefs.getStringList('donePercent') ?? null;
   }
 
-  set completedExercises(String completedExercises) {
-    _prefs.setString('completedExercises', completedExercises);
+  set donePercent(List<String> donePercent) {
+    _prefs.setStringList('donePercent', donePercent);
   }
 }

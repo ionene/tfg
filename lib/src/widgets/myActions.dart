@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:tfg_ione/preferences/main_preferences.dart';
 

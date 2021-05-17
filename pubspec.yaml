@@ -33,6 +33,13 @@ dependencies:
   path:
   provider: ^3.0.0+1
   shared_preferences: ^2.0.5
+  flutter_launcher_icons: ^0.9.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon/logo.png"
+  adaptive_icon_background: "assets/images/icon/logo.png"
 
 dev_dependencies:
   flutter_test:
@@ -47,9 +54,9 @@ flutter:
     - assets/images/units/
     - assets/images/avatar/
     - assets/images/colors/
-    - assets/images/congrats/
     - assets/images/emotions/
     - assets/images/icon/
+    - assets/images/family/
     - assets/data/
     - assets/audio/
   # The following line ensures that the Material Icons font is

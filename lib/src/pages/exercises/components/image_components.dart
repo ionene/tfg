@@ -9,7 +9,9 @@ class ImageComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Container(
-      child: Text(image),
+      child: Image(
+        image: AssetImage('images/'+ image),
+      ),
     );
   }
 }
