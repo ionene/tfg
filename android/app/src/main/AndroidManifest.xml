@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tfg_ione">
    <application
-        android:label="tfg_ione"
+        android:label="Ikastruk"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

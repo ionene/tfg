@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Ione App',
+      title: 'Ikastruk',
       initialRoute: _prefs.initialPage,
       routes: getAppRoutes(),
     );
