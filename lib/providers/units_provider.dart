@@ -12,8 +12,8 @@ class UnitiesProvider {
     final List<UnitModel> units = [];
 
     unitsData['units'].forEach((unit) {
-      final prodTemp = UnitModel.fromJson(unit);
-      units.add(prodTemp);
+      final unitTemp = UnitModel.fromJson(unit);
+      units.add(unitTemp);
     });
 
     return units;

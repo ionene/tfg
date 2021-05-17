@@ -2,18 +2,28 @@ import 'package:flutter/material.dart';
 
 import 'package:tfg_ione/src/routes/routes.dart';
 
-void main() {
+import 'package:tfg_ione/preferences/main_preferences.dart';
+
+void main() async {
+
+  final prefs = new MainPreferences();
+  await prefs.initPrefs();
+
   runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
+
+    final _prefs = MainPreferences();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ione App',
-      initialRoute: 'home',
+      initialRoute: _prefs.initialPage,
       routes: getAppRoutes(),
     );
   }

@@ -1,7 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:tfg_ione/preferences/main_preferences.dart';
+import 'package:tfg_ione/src/widgets/myActions.dart';
 
 class MyAppBar extends AppBar {
+  
   MyAppBar({Key key, String title, BuildContext context})
       : super(
           key: key,
@@ -13,17 +16,6 @@ class MyAppBar extends AppBar {
             ),
           ),
           elevation: 0.0,
-          actions: <Widget>[
-            Padding(padding: EdgeInsets.only(right: 10),
-              child: CircleAvatar(
-                backgroundColor: Colors.white24,
-                child: Image(   
-                  height: 40,
-                  fit: BoxFit.cover,         
-                  image: AssetImage('assets/images/avatar/' + 'avatar.png'),
-                ),
-              ),
-            ),  
-          ],
+          actions: [MyActions()],
         );
 }

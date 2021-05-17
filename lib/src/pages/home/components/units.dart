@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-import 'package:tfg_ione/providers/unities_provider.dart';
+import 'package:tfg_ione/providers/units_provider.dart';
 import 'package:tfg_ione/src/models/unit_model.dart';
 
 class Unities extends StatefulWidget {
