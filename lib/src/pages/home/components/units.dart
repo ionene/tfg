@@ -34,7 +34,9 @@ class _UnitiesState extends State<Unities> {
       builder: (BuildContext context, snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
-            return CircularProgressIndicator();
+            return Container(
+              child: CircularProgressIndicator()
+            );
           default:
             if (snapshot.hasError)
               return Text('Error: ${snapshot.error}');
@@ -47,10 +49,10 @@ class _UnitiesState extends State<Unities> {
                 [units[4], units[5]],
               ];
 
-              if (_prefs.donePercent == null) {
-                List<String> donePercent = [];
+              if (_prefs.donePercent.length == 0) {
+                List<dynamic> donePercent = [];
 
-                units.forEach((u) => donePercent.add('0'));
+                units.forEach((u) => donePercent.add(0));
 
                 _prefs.donePercent = donePercent;
               }
@@ -60,10 +62,6 @@ class _UnitiesState extends State<Unities> {
         }
       },
     );
-  }
-
-  String generateImage(String number) {
-    return 'image-' + number.toString() + '.png';
   }
 
   Widget unitiesListView() {
@@ -106,7 +104,8 @@ class _UnitiesState extends State<Unities> {
           child: CircularPercentIndicator(
             radius: 80.0,
             lineWidth: 5.0,
-            percent: double.parse(_prefs.donePercent[unit.id - 1]) * 0.2,
+            percent:
+                double.parse(_prefs.donePercent[unit.id - 1].toString()) * 0.2,
             center: Container(
               margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
               decoration: BoxDecoration(

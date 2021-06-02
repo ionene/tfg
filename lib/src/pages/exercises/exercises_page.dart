@@ -33,7 +33,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
 
     unit = arguments['unit'];
     index = arguments['index'];
-    
+
     return Scaffold(
       appBar: MyAppBar(
         title: unit.title,
@@ -85,15 +85,15 @@ class _ExercisesPageState extends State<ExercisesPage> {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(top: 50.0),
-            height: size.height * 0.5,
+            padding: EdgeInsets.only(top: 20.0),
+            height: size.height * 0.4,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: components,
             ),
           ),
           Container(
-            height: size.height * 0.4,
+            height: size.height * 0.5,
             child: WordsComponent(
               load: exercise.load,
               response: exercise.response,
@@ -106,8 +106,8 @@ class _ExercisesPageState extends State<ExercisesPage> {
   }
 
   incrementExercise() {
-    List<String> donePercent = _prefs.donePercent;
-    donePercent[index] = (actualExercise + 1).toString();
+    List<dynamic> donePercent = _prefs.donePercent;
+    donePercent[index] = actualExercise + 1;
     _prefs.donePercent = donePercent;
 
     (actualExercise < unit.exercises.length - 1)

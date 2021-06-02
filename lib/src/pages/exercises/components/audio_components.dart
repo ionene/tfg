@@ -26,15 +26,15 @@ class AudioComponent extends StatelessWidget {
           GestureDetector(
             onTap: () => audioCache.play('audio/' + audio),
             child: Container(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(15.0),
               
               decoration: BoxDecoration(
                 color: Colors.blue[100],
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Image(
-                height: 85,
-                image: AssetImage('images/icon/audio.png'),
+                height: 60,
+                image: AssetImage('assets/images/icon/audio.png'),
               ),
             ),
           ),

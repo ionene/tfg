@@ -25,7 +25,7 @@ class UnitModel {
   factory UnitModel.fromJson(Map<String, dynamic> json) => UnitModel(
         id: json["id"],
         title: json["title"],
-        percent: json["percent"],
+        percent: double.parse(json["percent"].toString()),
         image: json["image"],
         color: json["color"],
         exercises: List<ExerciseModel>.from(json["exercises"].map((e) => ExerciseModel.fromJson(e)).toList()),

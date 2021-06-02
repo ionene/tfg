@@ -22,6 +22,8 @@ class _LoginPageState extends State<LoginPage> {
 
   final _formKey = GlobalKey<FormState>();
 
+  final _prefs = MainPreferences();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,6 +126,8 @@ class _LoginPageState extends State<LoginPage> {
 
     Map resp = await userProvider.register(user.email, user.password);
 
+    if (resp['ok']) _prefs.initialPage = 'home';
+
     (resp['ok'])
         ? Navigator.pushReplacementNamed(context, 'home')
         : _showError(
@@ -131,8 +135,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _login(BuildContext context) async {
-    final _prefs = MainPreferences();
-
+  
     if (!_formKey.currentState.validate()) return;
 
     Map resp = await userProvider.login(user.email, user.password);

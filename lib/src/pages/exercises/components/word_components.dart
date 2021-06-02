@@ -65,9 +65,7 @@ class _WordsComponentState extends State<WordsComponent> {
     chips = _generateChips(selectedWords);
 
     return Container(
-      padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
       child: Wrap(
-        runSpacing: 10.0,
         children: chips,
       ),
     );
@@ -91,10 +89,9 @@ class _WordsComponentState extends State<WordsComponent> {
     chips = _generateChips(words);
 
     return Container(
-      height: 100,
-      padding: EdgeInsets.all(10),
+      height: 110,
+      padding: EdgeInsets.all(5),
       child: Wrap(
-        runSpacing: 10.0,
         children: chips,
       ),
     );

@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:tfg_ione/preferences/main_preferences.dart';
 
 class MyActions extends StatelessWidget {
-  final _prefs = MainPreferences();
 
+  final _prefs = MainPreferences();
+  
   @override
   Widget build(BuildContext context) {
+    
+
+    if (_prefs.initialPage == 'login') 
+      return Container();
+    
     return Row(
       children: [
         Padding(
