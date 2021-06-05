@@ -13,7 +13,7 @@ class MainPreferences {
     box.write('initialPage', initialPage);
   }
   
-  get donePercent{
+  get donePercent {
     return box.read('donePercent') ?? [];
   }
 

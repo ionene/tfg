@@ -25,6 +25,8 @@ class _ExercisesPageState extends State<ExercisesPage> {
   int actualExercise = 0;
   int index;
 
+  bool start = false;
+
   final _prefs = MainPreferences();
 
   @override
@@ -33,6 +35,22 @@ class _ExercisesPageState extends State<ExercisesPage> {
 
     unit = arguments['unit'];
     index = arguments['index'];
+
+    if (!start) {
+      int tempActualExercise = arguments['actualExercise'] ?? 0;
+
+      if (tempActualExercise == 5) {
+        actualExercise = 0;
+
+        updateDonePercent(0);
+      } else {
+        actualExercise = tempActualExercise;
+      }
+
+      start = true;
+
+      setState(() {});
+    }
 
     return Scaffold(
       appBar: MyAppBar(
@@ -105,15 +123,20 @@ class _ExercisesPageState extends State<ExercisesPage> {
     );
   }
 
-  incrementExercise() {
-    List<dynamic> donePercent = _prefs.donePercent;
-    donePercent[index] = actualExercise + 1;
-    _prefs.donePercent = donePercent;
+  void incrementExercise() {
+    ++actualExercise;
 
-    (actualExercise < unit.exercises.length - 1)
-        ? actualExercise++
-        : Navigator.pushReplacementNamed(context, 'home');
-
+    updateDonePercent(actualExercise);
+    
+    if (actualExercise == unit.exercises.length)
+      Navigator.pop(context);
+      
     setState(() {});
+  }
+
+  void updateDonePercent(int percent) {
+     List<dynamic> donePercent = _prefs.donePercent;
+      donePercent[index] = percent;
+      _prefs.donePercent = donePercent;
   }
 }

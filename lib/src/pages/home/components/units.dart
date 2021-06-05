@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:tfg_ione/preferences/main_preferences.dart';
@@ -19,7 +21,6 @@ class _UnitiesState extends State<Unities> {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       child: _getUnits(),
     );
@@ -34,9 +35,7 @@ class _UnitiesState extends State<Unities> {
       builder: (BuildContext context, snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
-            return Container(
-              child: CircularProgressIndicator()
-            );
+            return Container(child: CircularProgressIndicator());
           default:
             if (snapshot.hasError)
               return Text('Error: ${snapshot.error}');
@@ -95,17 +94,27 @@ class _UnitiesState extends State<Unities> {
     );
   }
 
+  FutureOr _updateState(p) {
+    setState(() {});
+  }
+
   Widget _unit(BuildContext context, UnitModel unit) {
+    var donePercent = _prefs.donePercent[unit.id - 1];
+
+    if (!(donePercent is int)) donePercent = int.parse(donePercent);
+
     return Column(
       children: [
         GestureDetector(
-          onTap: () => Navigator.pushNamed(context, 'exercises',
-              arguments: {'unit': unit, 'index': unit.id - 1}),
+          onTap: () => Navigator.pushNamed(context, 'exercises', arguments: {
+            'unit': unit,
+            'index': unit.id - 1,
+            'actualExercise': donePercent
+          }).then(_updateState),
           child: CircularPercentIndicator(
             radius: 80.0,
             lineWidth: 5.0,
-            percent:
-                double.parse(_prefs.donePercent[unit.id - 1].toString()) * 0.2,
+            percent: double.parse(donePercent.toString()) * 0.2,
             center: Container(
               margin: EdgeInsets.fromLTRB(10, 11, 10, 11),
               decoration: BoxDecoration(
